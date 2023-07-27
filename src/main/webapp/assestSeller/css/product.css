@@ -1,0 +1,103 @@
+:root {
+    --primary-color: rgb(244, 73, 101);
+    --primary-rgba-color: rgba(244, 73, 101, 0.7);
+    --white-color: #fff;
+    --black-color: #000;
+    --border-color: #d8d4d4;
+}
+
+.container-header {
+    display: flex;
+}
+
+.form_modal.type_product {
+    display: none;
+}
+
+.form_modal.product {
+    display: none;
+}
+
+.link-add-product {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link-add-product:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.icon-add {
+    margin-right: 6px;
+}
+
+.form_modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+.modal_container {
+    position: relative;
+    background-image: linear-gradient(180deg, #fb7b90 10%, #4665c1 100%);
+    animation: modalFadeIn ease 0.4s;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.btn-pri {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-pri:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: 1px solid var(--primary-color);
+    background-image: linear-gradient(180deg, #fb7b90 10%, #4665c1 100%);
+}
+
+.modal_body {
+    padding-top: 40px;
+}
+
+.text_title {
+    color: var(--white-color);
+}
+
+.icon-X {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    padding: 4px;
+    z-index: 1;
+}
+
+.icon-X:hover {
+    cursor: pointer;
+}
+
+.footer {
+    padding-bottom: 20px;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

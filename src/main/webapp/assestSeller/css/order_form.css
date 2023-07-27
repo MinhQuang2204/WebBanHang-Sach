@@ -1,0 +1,68 @@
+.container-header {
+    display: flex;
+}
+
+.form_modal.type_product {
+    display: none;
+}
+
+.form_modal.product {
+    display: none;
+}
+
+.link-add-product {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link-add-product:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.icon-add {
+    margin-right: 6px;
+}
+
+.form_modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+.content-modal {
+    position: relative;
+    animation: modalFadeIn ease 0.4s;
+    padding-top: 26px;
+}
+
+.btn-exit {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    font-size: 2rem;
+    padding: 4px;
+    z-index: 1;
+}
+
+.btn-exit:hover {
+    cursor: pointer;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
